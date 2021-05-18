@@ -12,7 +12,13 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
+            script{
+                        dir("terraform_anu")
+                        {
+                            git "https://github.com/Anupriya35/jenkinpipe.git"
+                        }
                 echo 'test stage'
+                
             }
         }
 
